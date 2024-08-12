@@ -109,7 +109,7 @@
     z-index: 2;
   }
   
-  .about-title {
+  .title {
     color: white;
     display: block;
     font-family: "Playfair Display", serif;
@@ -144,15 +144,6 @@
   #discography-items {
     position: relative;
     z-index: 2;
-  }
-  
-  .discography-title {
-    color: white;
-    display: block;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 4vw, 4rem);
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-    margin-left: clamp(4rem, 20vw, 48rem);
   }
  
   .discography-item {
