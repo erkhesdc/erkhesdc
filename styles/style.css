@@ -1,0 +1,225 @@
+:root {
+    --clr-bg: rgb(0, 0, 0);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+    ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  * {box-sizing:border-box}
+
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  section {
+    height:100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  body {
+    background-color: var(--clr-bg);
+    margin: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  #menu {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+  }
+  
+  #menu[data-active-index="0"] > #menu-background-image {
+    background-position: center 45%;
+  }
+  
+  #menu[data-active-index="1"] > #menu-background-image {
+    background-position: center 50%;
+  }
+  
+  #menu[data-active-index="2"] > #menu-background-image {
+    background-position: center 55%;
+  }
+  
+  #menu-background-image {
+    background-image: url("/assets/EPpost.png");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: background-size 800ms ease, background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  #menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+  }
+  
+  #menu-items:hover > .menu-item {
+    opacity: 0.3;
+  }
+  
+  #menu-items:hover > .menu-item:hover {
+    opacity: 1;
+  }
+  
+  .menu-item {
+    color: white;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
+    text-decoration: none;
+  }
+  
+  #about {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #about-items {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .about-title {
+    color: white;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    margin-left: clamp(4rem, 20vw, 48rem);
+  }
+ 
+  .about-paragraph {
+    color: white;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin-left: clamp(4rem, 20vw, 48rem);
+    margin-right: clamp(4rem, 20vw, 48rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  }
+
+  .valink {
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  #discography {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #discography-items {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .discography-title {
+    color: white;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    margin-left: clamp(4rem, 20vw, 48rem);
+  }
+ 
+  .discography-item {
+    color: white;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin-left: clamp(4rem, 20vw, 48rem);
+    margin-right: clamp(4rem, 20vw, 48rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  }
+  
+  #card {
+    margin-right: clamp(4rem, 20vw, 48rem);
+    overflow: hidden; 
+  }
+
+  #card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @media(max-width: 1000px) {
+    #card {
+      display: none;
+    }
+  }
+
+  #socials {
+    align-items: center;
+    display: flex;
+    height: 85vh;
+    width: 100vw;
+  }
+  
+  #socials-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+  }
+ 
+  .socials-item {
+    color: white;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    cursor: pointer;
+    transition: opacity 400ms ease;
+    text-decoration: none;
+  }
+  
+  #socials-items:hover > .socials-item {
+    opacity: 0.3;
+  }
+  
+  #socials-items:hover > .socials-item:hover {
+    opacity: 1;
+  }
+
+  #disclaimer {
+    align-items: center;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    font-size: clamp(1rem, 1vw, 1rem);
+    color:gray;
+    padding-left:2rem;
+    padding-right:2rem;
+  }
